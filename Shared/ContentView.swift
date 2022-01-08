@@ -33,9 +33,6 @@ struct ContentView: View {
         case Forcus5
         case Forcus6
         case Forcus7
-        case Forcus8
-        case Forcus9
-        case Forcus10
     }
     
     @FocusState var focus:Field?
@@ -48,7 +45,7 @@ struct ContentView: View {
     @State var goukei : String = "0"
     
     @State var kakaku : [String] = ["", "", "", "", "", "", ""]
-    @State var kazu : [String] = ["0", "0", "0", "0", "0", "0", "0"]
+    @State var kazu : [String] = ["", "", "", "", "", "", ""]
     @State var result : [Int] = [0, 0, 0, 0, 0, 0, 0]
     @State var hyouji : [String] = ["0", "0", "0", "0", "0", "0", "0"]
     
@@ -62,7 +59,7 @@ struct ContentView: View {
             
             VStack{
                 BannerAdView().frame(width: 320, height: 50)
-                Text("ぴったり買うには？")
+                Text("ぎりぎり買うには？")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .frame(width: 300, height: 40)
@@ -79,13 +76,17 @@ struct ContentView: View {
                             .focused($Forcused)
                             .focused($focus, equals: Field.Forcus1)
                         TextField("", text : $kakaku[1])
-                            .focused($focus, equals: Field.Forcus3)
+                            .focused($focus, equals: Field.Forcus2)
                         TextField("", text : $kakaku[2])
-                            .focused($focus, equals: Field.Forcus5)
+                            .focused($focus, equals: Field.Forcus3)
                         TextField("", text : $kakaku[3])
-                            .focused($focus, equals: Field.Forcus7)
+                            .focused($focus, equals: Field.Forcus4)
                         TextField("", text : $kakaku[4])
-                            .focused($focus, equals: Field.Forcus9)
+                            .focused($focus, equals: Field.Forcus5)
+                        TextField("", text : $kakaku[5])
+                            .focused($focus, equals: Field.Forcus6)
+                        TextField("", text : $kakaku[6])
+                            .focused($focus, equals: Field.Forcus7)
                     }
                     .frame(width: 105)
                     .onAppear {
@@ -103,16 +104,15 @@ struct ContentView: View {
                                 kazu[0] = String(pluscount(moji: ("\(kazu[0])")))
                                 result[0] = siki(kakaku: ("\(kakaku[0])") ,suuryou: ("\(kazu[0])"))
                                 hyouji[0] = String(result[0])
-                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                             }) {
                                 Image(systemName: "plus.circle")}
                             TextField("", text : $kazu[0])
-                                .focused($focus, equals: Field.Forcus2)
                             Button(action: {
                                 kazu[0] = String(minuscount(moji: ("\(kazu[0])")))
                                 result[0] = siki(kakaku: ("\(kakaku[0])") ,suuryou: ("\(kazu[0])"))
                                 hyouji[0] = String(result[0])
-                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                             }) {
                                 Image(systemName: "minus.circle")}
                         }
@@ -121,16 +121,15 @@ struct ContentView: View {
                                 kazu[1] = String(pluscount(moji: ("\(kazu[1])")))
                                 result[1] = siki(kakaku: ("\(kakaku[1])") ,suuryou: ("\(kazu[1])"))
                                 hyouji[1] = String(result[1])
-                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                             }) {
                                 Image(systemName: "plus.circle")}
                             TextField("", text : $kazu[1])
-                                .focused($focus, equals: Field.Forcus4)
                             Button(action: {
                                 kazu[1] = String(minuscount(moji: ("\(kazu[1])")))
                                 result[1] = siki(kakaku: ("\(kakaku[1])") ,suuryou: ("\(kazu[1])"))
                                 hyouji[1] = String(result[1])
-                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                             }) {
                                 Image(systemName: "minus.circle")}
                         }
@@ -139,16 +138,15 @@ struct ContentView: View {
                                 kazu[2] = String(pluscount(moji: ("\(kazu[2])")))
                                 result[2] = siki(kakaku: ("\(kakaku[2])") ,suuryou: ("\(kazu[2])"))
                                 hyouji[2] = String(result[2])
-                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                             }) {
                                 Image(systemName: "plus.circle")}
                             TextField("", text : $kazu[2])
-                                .focused($focus, equals: Field.Forcus6)
                             Button(action: {
                                 kazu[2] = String(minuscount(moji: ("\(kazu[2])")))
                                 result[2] = siki(kakaku: ("\(kakaku[2])") ,suuryou: ("\(kazu[2])"))
                                 hyouji[2] = String(result[2])
-                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                             }) {
                                 Image(systemName: "minus.circle")}
                         }
@@ -157,16 +155,15 @@ struct ContentView: View {
                                 kazu[3] = String(pluscount(moji: ("\(kazu[3])")))
                                 result[3] = siki(kakaku: ("\(kakaku[3])") ,suuryou: ("\(kazu[3])"))
                                 hyouji[3] = String(result[3])
-                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                             }) {
                                 Image(systemName: "plus.circle")}
                             TextField("", text : $kazu[3])
-                                .focused($focus, equals: Field.Forcus8)
                             Button(action: {
                                 kazu[3] = String(minuscount(moji: ("\(kazu[3])")))
                                 result[3] = siki(kakaku: ("\(kakaku[3])") ,suuryou: ("\(kazu[3])"))
                                 hyouji[3] = String(result[3])
-                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                             }) {
                                 Image(systemName: "minus.circle")}
                         }
@@ -175,19 +172,53 @@ struct ContentView: View {
                                 kazu[4] = String(pluscount(moji: ("\(kazu[4])")))
                                 result[4] = siki(kakaku: ("\(kakaku[4])") ,suuryou: ("\(kazu[4])"))
                                 hyouji[4] = String(result[4])
-                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                             }) {
                                 Image(systemName: "plus.circle")}
                             TextField("", text : $kazu[4])
-                                .focused($focus, equals: Field.Forcus10)
                             Button(action: {
                                 kazu[4] = String(minuscount(moji: ("\(kazu[4])")))
                                 result[4] = siki(kakaku: ("\(kakaku[4])") ,suuryou: ("\(kazu[4])"))
                                 hyouji[4] = String(result[4])
-                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                             }) {
                                 Image(systemName: "minus.circle")}
                         }
+                        HStack(spacing: 5){
+                            Button(action: {
+                                kazu[5] = String(pluscount(moji: ("\(kazu[5])")))
+                                result[5] = siki(kakaku: ("\(kakaku[5])") ,suuryou: ("\(kazu[5])"))
+                                hyouji[5] = String(result[5])
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
+                            }) {
+                                Image(systemName: "plus.circle")}
+                            TextField("", text : $kazu[5])
+                            Button(action: {
+                                kazu[5] = String(minuscount(moji: ("\(kazu[5])")))
+                                result[5] = siki(kakaku: ("\(kakaku[5])") ,suuryou: ("\(kazu[5])"))
+                                hyouji[5] = String(result[5])
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
+                            }) {
+                                Image(systemName: "minus.circle")}
+                        }
+                        HStack(spacing: 5){
+                            Button(action: {
+                                kazu[6] = String(pluscount(moji: ("\(kazu[6])")))
+                                result[6] = siki(kakaku: ("\(kakaku[6])") ,suuryou: ("\(kazu[6])"))
+                                hyouji[6] = String(result[6])
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
+                            }) {
+                                Image(systemName: "plus.circle")}
+                            TextField("", text : $kazu[6])
+                            Button(action: {
+                                kazu[6] = String(minuscount(moji: ("\(kazu[6])")))
+                                result[6] = siki(kakaku: ("\(kakaku[6])") ,suuryou: ("\(kazu[6])"))
+                                hyouji[6] = String(result[6])
+                                goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
+                            }) {
+                                Image(systemName: "minus.circle")}
+                        }
+
                     }
                     VStack(spacing: 5){
                         Text("小計")
@@ -198,6 +229,8 @@ struct ContentView: View {
                         TextField("", text : $hyouji[2])
                         TextField("", text : $hyouji[3])
                         TextField("", text : $hyouji[4])
+                        TextField("", text : $hyouji[5])
+                        TextField("", text : $hyouji[6])
                     }
                     .disabled(true)
                 }
@@ -217,8 +250,9 @@ struct ContentView: View {
                 HStack{
                     Button(action: {
                         kakaku = ["", "", "", "", "", "", ""]
-                        kazu = ["0", "0", "0", "0", "0", "0", "0"]
+                        kazu = ["", "", "", "", "", "", ""]
                         hyouji = ["0", "0", "0", "0", "0", "0", "0"]
+                        result = [0, 0, 0, 0, 0, 0, 0]
                         goukei = "0"
                         focus = Optional(Pittari.ContentView.Field.Forcus1)
                     }){
@@ -233,7 +267,22 @@ struct ContentView: View {
                     Spacer()
                         .frame(width: 20)
                     Button(action: {
-                        goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4]))
+                        result[0] = siki(kakaku: ("\(kakaku[0])") ,suuryou: ("\(kazu[0])"))
+                        result[1] = siki(kakaku: ("\(kakaku[1])") ,suuryou: ("\(kazu[1])"))
+                        result[2] = siki(kakaku: ("\(kakaku[2])") ,suuryou: ("\(kazu[2])"))
+                        result[3] = siki(kakaku: ("\(kakaku[3])") ,suuryou: ("\(kazu[3])"))
+                        result[4] = siki(kakaku: ("\(kakaku[4])") ,suuryou: ("\(kazu[4])"))
+                        result[5] = siki(kakaku: ("\(kakaku[5])") ,suuryou: ("\(kazu[5])"))
+                        result[6] = siki(kakaku: ("\(kakaku[6])") ,suuryou: ("\(kazu[6])"))
+                        hyouji[0] = String(result[0])
+                        hyouji[1] = String(result[1])
+                        hyouji[2] = String(result[2])
+                        hyouji[3] = String(result[3])
+                        hyouji[4] = String(result[4])
+                        hyouji[5] = String(result[5])
+                        hyouji[6] = String(result[6])
+
+                        goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                     }){
                         Text("合計計算")
                             .fontWeight(.semibold)
@@ -243,8 +292,6 @@ struct ContentView: View {
                             .cornerRadius(18)
                             .font(.title)
                     }
-                    
-                    
                 }
                 Spacer()
             }
@@ -297,16 +344,16 @@ func minuscount(moji : String) -> Int {
     return momoji
 }
 
-func goukeihyouji(a : Int, b : Int, c : Int, d : Int, e : Int) -> Int {
-    let goukei : Int
+func goukeihyouji(a : Int, b : Int, c : Int, d : Int, e : Int, f : Int, g : Int) -> Int {
+    var goukei : Int = 0
     let aa : Int = a
     let bb : Int = b
     let cc : Int = c
     let dd : Int = d
     let ee : Int = e
-    goukei = aa + bb + cc + dd + ee
-    print(a)
-    print(goukei)
+    let ff : Int = f
+    let gg : Int = g
+    goukei = aa + bb + cc + dd + ee + ff + gg
     return goukei
 }
 
