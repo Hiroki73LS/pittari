@@ -8,9 +8,9 @@ struct BannerAdView: UIViewRepresentable {
     func makeUIView(context: Context) -> GADBannerView {
         
         let banner = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        //        banner.adUnitID = "ca-app-pub-1023155372875273/2406169933"
+                banner.adUnitID = "ca-app-pub-1023155372875273/6338202743"
         //↑こちら本物。
-        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+//        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         //↑こちらテスト用。
         
         banner.rootViewController = UIApplication.shared.windows.first?.rootViewController
@@ -56,18 +56,20 @@ struct ContentView: View {
                 .onTapGesture {
                     UIApplication.shared.closeKeyboard()
                 }
-            
-            VStack{
+            VStack(spacing: 5){
                 BannerAdView().frame(width: 320, height: 50)
-                Text("ぎりぎり買うには？")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                    .frame(width: 300, height: 40)
-                    .foregroundColor(Color(.white))
-                    .background(Color(.orange))
-                    .cornerRadius(3)
                 Spacer()
+                    .frame(height: 10)
                 HStack{
+                    Spacer()
+                        .frame(width: 90)
+                    Text("合計")
+                    TextField("", text : $goukei)
+                }
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .multilineTextAlignment(.trailing)
+                .font(.largeTitle)
+                HStack(spacing: 5){
                     VStack(spacing: 5){
                         Text("価格")
                             .font(.title)
@@ -218,14 +220,14 @@ struct ContentView: View {
                             }) {
                                 Image(systemName: "minus.circle")}
                         }
-
+                        
                     }
                     VStack(spacing: 5){
                         Text("小計")
                             .font(.title)
                             .frame(height: 28)
                         TextField("", text : $hyouji[0])
-                        TextField("", text: $hyouji[1])
+                        TextField("", text : $hyouji[1])
                         TextField("", text : $hyouji[2])
                         TextField("", text : $hyouji[3])
                         TextField("", text : $hyouji[4])
@@ -239,15 +241,6 @@ struct ContentView: View {
                 .keyboardType(.numberPad)
                 .font(.title)
                 HStack{
-                    Spacer()
-                        .frame(width: 90)
-                    Text("合計")
-                    TextField("", text : $goukei)
-                }
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .multilineTextAlignment(.trailing)
-                .font(.title)
-                HStack{
                     Button(action: {
                         kakaku = ["", "", "", "", "", "", ""]
                         kazu = ["", "", "", "", "", "", ""]
@@ -258,7 +251,7 @@ struct ContentView: View {
                     }){
                         Text("リセット")
                             .fontWeight(.semibold)
-                            .frame(width: 140, height: 40)
+                            .frame(width: 140, height: 50)
                             .foregroundColor(Color(.white))
                             .background(Color(.blue))
                             .cornerRadius(18)
@@ -281,12 +274,12 @@ struct ContentView: View {
                         hyouji[4] = String(result[4])
                         hyouji[5] = String(result[5])
                         hyouji[6] = String(result[6])
-
+                        
                         goukei = String(goukeihyouji( a : result[0], b : result[1], c : result[2], d : result[3], e : result[4], f : result[5], g : result[6]))
                     }){
                         Text("合計計算")
                             .fontWeight(.semibold)
-                            .frame(width: 140, height: 40)
+                            .frame(width: 140, height: 50)
                             .foregroundColor(Color(.white))
                             .background(Color(.blue))
                             .cornerRadius(18)
@@ -298,18 +291,30 @@ struct ContentView: View {
         }.toolbar{
             ToolbarItem(placement: .keyboard){
                 HStack{
+                    Spacer()
+                        .frame(width: 105)
                     Button(action: {
                         focus = Field(rawValue: focus!.rawValue - 1)
                     }){
-                        Image(systemName: "chevron.left")
+                        Image(systemName: "chevron.up.circle")
                     }
                     Spacer()
                         .frame(width: 40)
                     Button(action: {
                         focus = Field(rawValue: focus!.rawValue + 1)
                     }){
-                        Image(systemName: "chevron.right")
-                    }}}}
+                        Image(systemName: "chevron.down.circle")
+                    }
+                    Spacer()
+                        .frame(width: 40)
+                    Button(action: {
+                        UIApplication.shared.closeKeyboard()
+                    }){
+                        Text("Close")
+                        //                        Image(systemName: "chevron.down")
+                    }
+                    
+                }}}
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)) { _ in
             self.state = "Opened"
         }.onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidHideNotification)) { _ in
