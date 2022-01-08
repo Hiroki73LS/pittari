@@ -7,21 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A09D66585094B21EF3F5223 /* Pods_Pittari__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1235C795DC44CD05703072 /* Pods_Pittari__macOS_.framework */; };
 		4AEF4A3A27896AE000555BC5 /* PittariApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF4A2A27896ADD00555BC5 /* PittariApp.swift */; };
 		4AEF4A3B27896AE000555BC5 /* PittariApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF4A2A27896ADD00555BC5 /* PittariApp.swift */; };
 		4AEF4A3C27896AE000555BC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF4A2B27896ADD00555BC5 /* ContentView.swift */; };
 		4AEF4A3D27896AE000555BC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF4A2B27896ADD00555BC5 /* ContentView.swift */; };
 		4AEF4A3E27896AE000555BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEF4A2C27896AE000555BC5 /* Assets.xcassets */; };
 		4AEF4A3F27896AE000555BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEF4A2C27896AE000555BC5 /* Assets.xcassets */; };
+		EAE9DD8E207F4142989B5AE9 /* Pods_Pittari__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5281BDD11BA5249A685561A /* Pods_Pittari__iOS_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01F5F79AFA941AC4014880D4 /* Pods-Pittari (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pittari (iOS).release.xcconfig"; path = "Target Support Files/Pods-Pittari (iOS)/Pods-Pittari (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		2FA2B014DB7DA7A2C11D04F3 /* Pods-Pittari (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pittari (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Pittari (iOS)/Pods-Pittari (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		4AEF4A2A27896ADD00555BC5 /* PittariApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PittariApp.swift; sourceTree = "<group>"; };
 		4AEF4A2B27896ADD00555BC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4AEF4A2C27896AE000555BC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AEF4A3127896AE000555BC5 /* Pittari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pittari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEF4A3727896AE000555BC5 /* Pittari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pittari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEF4A3927896AE000555BC5 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		4AEF4A4827896C6A00555BC5 /* Pittari--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Pittari--iOS--Info.plist"; sourceTree = "<group>"; };
+		4B1235C795DC44CD05703072 /* Pods_Pittari__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pittari__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5456C1D1A6C9900F9E09ECC5 /* Pods-Pittari (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pittari (macOS).release.xcconfig"; path = "Target Support Files/Pods-Pittari (macOS)/Pods-Pittari (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		B5281BDD11BA5249A685561A /* Pods_Pittari__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pittari__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66F062F244F771AB0882D17 /* Pods-Pittari (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pittari (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Pittari (macOS)/Pods-Pittari (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE9DD8E207F4142989B5AE9 /* Pods_Pittari__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A09D66585094B21EF3F5223 /* Pods_Pittari__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,9 +56,12 @@
 		4AEF4A2427896ADD00555BC5 = {
 			isa = PBXGroup;
 			children = (
+				4AEF4A4827896C6A00555BC5 /* Pittari--iOS--Info.plist */,
 				4AEF4A2927896ADD00555BC5 /* Shared */,
 				4AEF4A3827896AE000555BC5 /* macOS */,
 				4AEF4A3227896AE000555BC5 /* Products */,
+				9C25B28C2DEFC49C9BBB86E1 /* Pods */,
+				9D1E5E1204E3AA914D7D046D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +92,26 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		9C25B28C2DEFC49C9BBB86E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FA2B014DB7DA7A2C11D04F3 /* Pods-Pittari (iOS).debug.xcconfig */,
+				01F5F79AFA941AC4014880D4 /* Pods-Pittari (iOS).release.xcconfig */,
+				E66F062F244F771AB0882D17 /* Pods-Pittari (macOS).debug.xcconfig */,
+				5456C1D1A6C9900F9E09ECC5 /* Pods-Pittari (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D1E5E1204E3AA914D7D046D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5281BDD11BA5249A685561A /* Pods_Pittari__iOS_.framework */,
+				4B1235C795DC44CD05703072 /* Pods_Pittari__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AEF4A4227896AE000555BC5 /* Build configuration list for PBXNativeTarget "Pittari (iOS)" */;
 			buildPhases = (
+				696DA7A5B420A2BFD5AB9ECE /* [CP] Check Pods Manifest.lock */,
 				4AEF4A2D27896AE000555BC5 /* Sources */,
 				4AEF4A2E27896AE000555BC5 /* Frameworks */,
 				4AEF4A2F27896AE000555BC5 /* Resources */,
+				A5D11B85C709F229D803350E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -102,6 +138,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AEF4A4527896AE000555BC5 /* Build configuration list for PBXNativeTarget "Pittari (macOS)" */;
 			buildPhases = (
+				4411C0AE1D36CD0FC1015C97 /* [CP] Check Pods Manifest.lock */,
 				4AEF4A3327896AE000555BC5 /* Sources */,
 				4AEF4A3427896AE000555BC5 /* Frameworks */,
 				4AEF4A3527896AE000555BC5 /* Resources */,
@@ -170,6 +207,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4411C0AE1D36CD0FC1015C97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pittari (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		696DA7A5B420A2BFD5AB9ECE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pittari (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5D11B85C709F229D803350E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pittari (iOS)/Pods-Pittari (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pittari (iOS)/Pods-Pittari (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pittari (iOS)/Pods-Pittari (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4AEF4A2D27896AE000555BC5 /* Sources */ = {
@@ -306,6 +407,7 @@
 		};
 		4AEF4A4327896AE000555BC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA2B014DB7DA7A2C11D04F3 /* Pods-Pittari (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +416,7 @@
 				DEVELOPMENT_TEAM = TGPVYURU8B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pittari--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -336,6 +439,7 @@
 		};
 		4AEF4A4427896AE000555BC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01F5F79AFA941AC4014880D4 /* Pods-Pittari (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,6 +448,7 @@
 				DEVELOPMENT_TEAM = TGPVYURU8B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pittari--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -367,6 +472,7 @@
 		};
 		4AEF4A4627896AE000555BC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E66F062F244F771AB0882D17 /* Pods-Pittari (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -395,6 +501,7 @@
 		};
 		4AEF4A4727896AE000555BC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5456C1D1A6C9900F9E09ECC5 /* Pods-Pittari (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
